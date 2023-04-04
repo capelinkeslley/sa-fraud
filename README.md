@@ -1,9 +1,13 @@
 # USANDO O DOCKER
 
 1 - Crie um arquivo `.env`, você pode duplicar o `.env.example` e renomear para `.env`. No `.env` coloque as informações do seu banco de dados;
+
 2 - Em seguida rode o seguinte comando: `docker compose build`;
+
 3 - Como o banco desse projeto ainda não está criado, rode o seguinte comando: `docker compose run web rake db:create db:migrate`;
+
 4 - Para finalizar basta rodar esse comando: `docker compose up`.
+
 
 Com isso, o back-end estará rodando na porta 3000.
 
