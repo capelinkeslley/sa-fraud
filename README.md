@@ -1,6 +1,7 @@
-# REGRAS
+# CAMPOS
 id, valor, mesma_titularidade, bank_id, criação_da_conta_benificiaria, 2_fa, benificiario_tem_2_fa, valor_transacionado_no_dia, transações_feitas_no_dia, data_da_ultima_transacao_para_esse_cliente
 
+# EXEMPLO DO SCRIPT QUE FAZ O PRÉ ANALISE
 transaction = UserTransaction.first
 user = transaction.user
 benificiary_account = transaction.beneficiary_account
@@ -17,6 +18,7 @@ if user.2_fa
 end
 
 
+# REGRAS (PODEM SER ALTERADAS)
 Se a transação for de mesma titularidade não é fraude
 Se o 2_fa está desabilitado é fraude
 Se o usuário ter o 2_fa habilitado:
