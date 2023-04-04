@@ -1,5 +1,5 @@
 # REGRAS
-# id, valor, mesma_titularidade, bank_id, criação_da_conta_benificiaria, 2_fa, benificiario_tem_2_fa, valor_transacionado_no_dia, transações_feitas_no_dia, data_da_ultima_transacao_para_esse_cliente
+id, valor, mesma_titularidade, bank_id, criação_da_conta_benificiaria, 2_fa, benificiario_tem_2_fa, valor_transacionado_no_dia, transações_feitas_no_dia, data_da_ultima_transacao_para_esse_cliente
 
 transaction = UserTransaction.first
 user = transaction.user
