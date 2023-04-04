@@ -1,3 +1,17 @@
+# USANDO O DOCKER
+
+1 - Crie um arquivo `.env`, você pode duplicar o `.env.example` e renomear para `.env`. No `.env` coloque as informações do seu banco de dados;
+2 - Em seguida rode o seguinte comando: `docker compose build`;
+3 - Como o banco desse projeto ainda não está criado, rode o seguinte comando: `docker compose run web rake db:create db:migrate`;
+4 - Para finalizar basta rodar esse comando: `docker compose up`.
+
+Com isso, o back-end estará rodando na porta 3000.
+
+# ENDPOINTS
+
+Dentro da pasta `docs` tem um arquivo `.json` que pode ser importado em uma collection do postman. Esse arquivo contém todos os exemplos de requests.
+
+
 # CAMPOS
 id, valor, mesma_titularidade, bank_id, criação_da_conta_benificiaria, 2_fa, benificiario_tem_2_fa, valor_transacionado_no_dia, transações_feitas_no_dia, data_da_ultima_transacao_para_esse_cliente
 
