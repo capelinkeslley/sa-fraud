@@ -34,7 +34,7 @@ module Analysis
 
     def amount_transacted_on_the_day
       UserTransaction.where(user_id: user.id, status: 'processed')
-                     .where('created_at::date = current_date')
+                     .where('created_at::date = current_date').sum(:value).to_f
     end
 
     def transactions_made_in_the_last_hour_for_this_beneficiary
@@ -43,6 +43,7 @@ module Analysis
     end
 
     def create_transaction_analysis
+      binding.pry
       TransactionAnalysis.create!(
         user_transaction_id: user_transaction.id,
         value: user_transaction.value,

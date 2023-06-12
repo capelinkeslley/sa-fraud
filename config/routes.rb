@@ -6,9 +6,7 @@ Rails.application.routes.draw do
       resources :bank_accounts do
         resources :user_transactions, only: :create
       end
-      resource :bank_accounts, only: [] do
-        get :user_bank_accounts
-      end
+      resources :bank_accounts, only: :index
     end
 
     resources :bank_accounts, only: [] do

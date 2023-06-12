@@ -1,6 +1,6 @@
 module Api
   class BankAccountsController < ApplicationController
-    def user_bank_accounts
+    def index
       render json: BankAccount.where(user_id: user_id)
     end
 
