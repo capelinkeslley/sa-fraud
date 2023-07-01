@@ -23,8 +23,6 @@ module Analysis
         req.body = { data: data }.to_json
       end
 
-      binding.pry
-
       JSON.parse(response.body)['fraud_prediction']
     end
 

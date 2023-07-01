@@ -43,7 +43,6 @@ module Analysis
     end
 
     def create_transaction_analysis
-      binding.pry
       TransactionAnalysis.create!(
         user_transaction_id: user_transaction.id,
         value: user_transaction.value,
